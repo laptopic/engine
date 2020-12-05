@@ -18,7 +18,7 @@ class MainController extends BaseController
 
     public function error(){
 
-        $code = $_GET['page'];
+        $code = isset($_GET['page']) ? $_GET['page'] : '404';
         $this->render($code);
     }
 
