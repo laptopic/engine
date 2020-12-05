@@ -30,4 +30,12 @@ if ( ! function_exists('serverMethod')){
     }
 }
 
+if ( ! function_exists('redirect')) {
+    function redirect($url)
+    {
+        header('Location: ' . $url);
+        exit;
+    }
+}
+
 

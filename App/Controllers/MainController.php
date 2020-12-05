@@ -16,5 +16,11 @@ class MainController extends BaseController
         $this->render('index');
     }
 
+    public function error(){
+
+        $code = $_GET['page'];
+        $this->render($code);
+    }
+
 
 }

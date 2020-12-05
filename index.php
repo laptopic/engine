@@ -14,5 +14,6 @@ if ( is_callable(array($controller, $action)) ) {
     $object->$action();
 } else {
     //тут лучше на 404 бросать
-    throw new \Exception("Controller class $controller not found");
+    redirect('?action=error&page=404');
+    //throw new \Exception("Controller class $controller not found");
 }
